@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Quản lý danh mục</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div class="head">
+      <img src="./img/Vector.png" alt="Logo" />
+    </div>
+
+    <div class="main">
+      <!-- SIDEBAR -->
+      <div class="sidebar">
+        <h2>Ecomance</h2>
+        <img src="./img/Vector.png" alt="Logo" />
+        <ul>
+          <li>📊 Thống kê</li>
+          <li>📁 Danh mục</li>
+          <li>🛒 Sản phẩm</li>
+        </ul>
+      </div>
+
+      <!-- CONTENT -->
+      <div class="container">
+        <h2>Quản lý danh mục</h2>
+
+        <div class="header">
+          <input id="search" placeholder="Tìm kiếm..." />
+          <button id="btnAdd">+ Thêm danh mục</button>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Tên</th>
+              <th>Trạng thái</th>
+              <th>Hành động</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+
+        <div id="pagination" class="pagination"></div>
+      </div>
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <h3>Danh mục</h3>
+
+        <input id="categoryId" placeholder="Mã danh mục" />
+        <div class="error" id="errId"></div>
+
+        <input id="categoryName" placeholder="Tên danh mục" />
+        <div class="error" id="errName"></div>
+
+        <div class="radio-group">
+          <label
+            ><input type="radio" name="status" value="Đang hoạt động" checked />
+            Đang hoạt động</label
+          >
+          <label
+            ><input type="radio" name="status" value="Ngừng hoạt động" /> Ngừng
+            hoạt động</label
+          >
+        </div>
+
+        <div class="btn-group">
+          <button id="btnSave">Lưu</button>
+          <button onclick="closeModal()">Đóng</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>
